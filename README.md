@@ -1,7 +1,6 @@
 # Dj-Rest-Auth
-[![<iMerica>](https://circleci.com/gh/jazzband/dj-rest-auth.svg?style=svg)](https://app.circleci.com/pipelines/github/jazzband/dj-rest-auth)
-[![Jazzband](https://jazzband.co/static/img/badge.svg)](https://jazzband.co/)
-[![Coverage Status](https://coveralls.io/repos/github/jazzband/dj-rest-auth/badge.svg?branch=master)](https://coveralls.io/github/jazzband/dj-rest-auth?branch=master)
+[![<iMerica>](https://circleci.com/gh/iMerica/dj-rest-auth.svg?style=svg)](https://app.circleci.com/pipelines/github/iMerica/dj-rest-auth)
+
 
 Drop-in API endpoints for handling authentication securely in Django Rest Framework. Works especially well 
 with SPAs (e.g React, Vue, Angular), and Mobile applications. 
@@ -32,7 +31,7 @@ Add URL patterns
 
 ```python
 urlpatterns = [
-    url(r'^dj-rest-auth/', include('dj_rest_auth.urls'))
+    path('dj-rest-auth/', include('dj_rest_auth.urls')),
 ]
 ```
     
@@ -45,6 +44,8 @@ JWT_AUTH_COOKIE = 'jwt-auth'
 ```
 
 ### Testing
+
+Install required modules with `pip install -r  dj_rest_auth/tests/requirements.pip`
 
 To run the tests within a virtualenv, run `python runtests.py` from the repository directory.
 The easiest way to run test coverage is with [`coverage`](https://pypi.org/project/coverage/),
